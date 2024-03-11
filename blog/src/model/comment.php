@@ -2,13 +2,8 @@
 
 function commentDbConnect()
 {
-    try {
-        $database = new PDO('mysql:host=localhost;dbname=blog_avbn;charset=utf8', 'root', '');
-
-        return $database;
-    } catch (Exception $e) {
-        die('Erreur : ' . $e->getMessage());
-    }
+    $database = new PDO('mysql:host=localhost;dbname=blog_avbn;charset=utf8', 'root', '');
+    return $database;
 }
 
 function getComments(string $post)
