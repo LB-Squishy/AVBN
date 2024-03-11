@@ -30,4 +30,5 @@ try {
     }
 } catch (Exception $e) {
     echo 'Erreur : ' . $e->getMessage();
+    require('templates/error.php');
 }
